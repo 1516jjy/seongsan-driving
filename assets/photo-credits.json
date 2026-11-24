@@ -1,0 +1,34 @@
+{
+  "seongsan-aerial.webp": {
+    "subject": "Seongsan Ilchulbong coastal view (not aerial imagery)",
+    "author": "Jake Mullins",
+    "source": "https://unsplash.com/photos/4VAaVN35FQo",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "changes": "resized and converted to WebP; cropped in page layout"
+  },
+  "seongsan-town.webp": {
+    "subject": "View from Seongsan Ilchulbong, Jeju Island",
+    "author": "N Riazi",
+    "source": "https://unsplash.com/photos/RjD376jWJXQ",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "changes": "resized and converted to WebP; cropped in page layout"
+  },
+  "fog-road.webp": {
+    "subject": "Foggy road in Farmington, California, USA; illustrative low-visibility photo, not Seongsan",
+    "author": "Fabio Sasso",
+    "source": "https://unsplash.com/photos/pit-K7geL-g",
+    "license": "Unsplash License",
+    "license_url": "https://unsplash.com/license",
+    "changes": "resized and converted to WebP; cropped in layout"
+  },
+  "rain-driving.gif": {
+    "subject": "Rainy driving windshield view; illustrative, not Seongsan or team footage",
+    "author": "Nothing Ahead",
+    "source": "https://www.pexels.com/video/view-from-a-car-driving-during-rain-12601918/",
+    "license": "Pexels License",
+    "license_url": "https://www.pexels.com/license/",
+    "changes": "cropped and resized; 6-second silent excerpt at 10fps converted to GIF; static WebP fallback"
+  }
+}
