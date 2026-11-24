@@ -86,3 +86,8 @@
  #project>.intro-question-row .rain-media{position:absolute;inset:0}
  #project>.intro-question-row .rain-media>img{height:100%;width:100%;aspect-ratio:auto;object-fit:cover;object-position:center 60%}
 }
+
+/* Preserve the full GIF frame at every viewport size. */
+#project>.intro-question-row .rain-media{position:relative;inset:auto}
+#project>.intro-question-row .rain-media>img{display:block;width:100%;height:auto;aspect-ratio:600/338;object-fit:contain;object-position:center}
+@media(min-width:701px){#project>.intro-question-row>.rain-pov{position:static;align-self:start;min-height:auto;margin:20px 0 0}}
