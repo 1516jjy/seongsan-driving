@@ -35,17 +35,6 @@ document.querySelectorAll('[data-map-view]').forEach(button=>button.addEventList
  document.getElementById('map-pins').hidden=!sumo;
  document.querySelectorAll('[data-map-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
 }));
-const range=document.getElementById('visibility-range');
-function updateRange(){
- const normalized=Number(range.value)/100;const extent=normalized*700;let count=0;
- document.querySelectorAll('.detected-car').forEach(car=>{const seen=Number(car.dataset.distance)<=extent;car.style.opacity=seen?'1':'.17';if(seen)count++;});
- const boundary=190+extent;
- document.getElementById('sense-area').setAttribute('width',String(boundary-125));
- document.getElementById('range-boundary').setAttribute('d',`M${boundary} 12V278`);
- document.getElementById('detected-count').textContent=String(count);
- document.getElementById('range-label').textContent=normalized>.7?'넓음':normalized>.4?'중간':'좁음';
-}
-range.addEventListener('input',updateRange);updateRange();
 const header=document.getElementById('site-header');
 function updateHeader(){header.classList.toggle('scrolled',window.scrollY>50)}
 window.addEventListener('scroll',updateHeader,{passive:true});updateHeader();
