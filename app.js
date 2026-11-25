@@ -1,5 +1,5 @@
 // Fill a source only when the actual clip is available. Empty values keep honest placeholders.
-const videoSources={full:'',roundabout:'',merge:'',signal:'',unsignalized:'',clear:'',fog:''};
+const videoSources={full:'',roundabout:'',merge:'',signal:'',unsignalized:'',tjunction:'',clear:'',fog:''};
 function mountVideo(slot,key){
  const src=videoSources[key];if(!src)return;
  const video=document.createElement('video');video.src=src;video.controls=true;video.playsInline=true;video.preload='metadata';
@@ -16,8 +16,8 @@ notice.querySelector('.close').addEventListener('click',()=>notice.close());noti
 notice.addEventListener('click',e=>{if(e.target!==notice)return;const r=notice.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)notice.close()});
 document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
  const code=document.getElementById(button.dataset.copy);
- try{await navigator.clipboard.writeText(code.textContent.trim());button.textContent='복사 완료';setTimeout(()=>button.textContent='복사',2000)}
- catch{const r=document.createRange();r.selectNodeContents(code);const s=window.getSelection();s.removeAllRanges();s.addRange(r);button.textContent='선택됨 · 직접 복사'}
+ try{await navigator.clipboard.writeText(code.textContent.trim());button.textContent='Copied';setTimeout(()=>button.textContent='Copy',2000)}
+ catch{const r=document.createRange();r.selectNodeContents(code);const s=window.getSelection();s.removeAllRanges();s.addRange(r);button.textContent='Selected · Copy manually'}
 }));
 
 const rainImage=document.getElementById('rain-animation');
